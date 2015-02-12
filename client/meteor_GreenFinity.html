@@ -1,0 +1,33 @@
+<head>
+  <title>meteor_GreenFinity</title>
+</head>
+
+
+<template name="Home">
+<h1>HELLO SPLORLD</h1>
+<a href="/about"><h3>About</h3></a>
+
+{{> inputForm}} <br />
+
+<ol>{{#each datum}}<li>{{text}}, {{createdAt}}</li>{{/each}}</ol>
+
+</template>
+
+<template name="About">
+<h1>YOU DON'T WANNA KNOW, KID</h1>
+<h4>Pro tip: <kbd>meteor reset</kbd> will clear the database!</h4>
+</template>
+
+<template name="inputForm">
+<label>Input some data?</label>
+  <form class="new-sensor">
+    <input type="text" name="sensor" class="inputField" placeholder="Sensor data" />
+  </form>
+</template>
+
+
+<template name="layout">
+
+	{{> yield}}
+
+</template>
